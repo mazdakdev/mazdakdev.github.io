@@ -1,6 +1,6 @@
 {
   "node_modules/nuxt/dist/app/entry.mjs": {
-    "file": "entry-2e4729a9.mjs",
+    "file": "entry-30b887d9.mjs",
     "src": "node_modules/nuxt/dist/app/entry.mjs",
     "isEntry": true,
     "dynamicImports": [
@@ -11,61 +11,61 @@
       "pages/index.vue"
     ],
     "css": [
-      "entry.fe227889.css"
+      "entry.33a0e3a3.css"
     ],
     "assets": [
       "profile.2da4a57b.jpeg"
     ]
   },
   "pages/blog/index.vue": {
-    "file": "index-3c9e007b.mjs",
+    "file": "index-a3b8a783.mjs",
     "src": "pages/blog/index.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_Footer-7fbd512c.mjs"
+      "_Footer-d5cf1580.mjs"
     ]
   },
-  "_Footer-7fbd512c.mjs": {
-    "file": "Footer-7fbd512c.mjs",
+  "_Footer-d5cf1580.mjs": {
+    "file": "Footer-d5cf1580.mjs",
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs"
     ]
   },
   "pages/blog/why-csharp-is-best.vue": {
-    "file": "why-csharp-is-best-28510050.mjs",
+    "file": "why-csharp-is-best-014ed8bc.mjs",
     "src": "pages/blog/why-csharp-is-best.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_Footer-7fbd512c.mjs"
+      "_Footer-d5cf1580.mjs"
     ]
   },
   "pages/blog/why-java-is-best.vue": {
-    "file": "why-java-is-best-c16c06c3.mjs",
+    "file": "why-java-is-best-47e6aacf.mjs",
     "src": "pages/blog/why-java-is-best.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_Footer-7fbd512c.mjs"
+      "_Footer-d5cf1580.mjs"
     ]
   },
   "pages/blog/why-python-is-best.vue": {
-    "file": "why-python-is-best-671f1b76.mjs",
+    "file": "why-python-is-best-05c48944.mjs",
     "src": "pages/blog/why-python-is-best.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_Footer-7fbd512c.mjs"
+      "_Footer-d5cf1580.mjs"
     ]
   },
   "pages/index.vue": {
-    "file": "index-6d39fdcf.mjs",
+    "file": "index-0fce5ef9.mjs",
     "src": "pages/index.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_Footer-7fbd512c.mjs"
+      "_Footer-d5cf1580.mjs"
     ]
   }
 }
