@@ -1,6 +1,6 @@
 {
   "node_modules/nuxt/dist/app/entry.mjs": {
-    "file": "entry-708e3e60.mjs",
+    "file": "entry-8c8a9e0f.mjs",
     "src": "node_modules/nuxt/dist/app/entry.mjs",
     "isEntry": true,
     "dynamicImports": [
@@ -13,70 +13,70 @@
       "pages/snippets/index.vue"
     ],
     "css": [
-      "entry.ec7f8234.css"
+      "entry.4a1527fa.css"
     ],
     "assets": [
       "profile.2da4a57b.jpeg"
     ]
   },
   "pages/blog/index.vue": {
-    "file": "index-36854b41.mjs",
+    "file": "index-63514c68.mjs",
     "src": "pages/blog/index.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_Footer-12049e91.mjs"
+      "_Footer-e60bc687.mjs"
     ]
   },
-  "_Footer-12049e91.mjs": {
-    "file": "Footer-12049e91.mjs",
+  "_Footer-e60bc687.mjs": {
+    "file": "Footer-e60bc687.mjs",
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs"
     ]
   },
   "pages/blog/why-csharp-is-best.vue": {
-    "file": "why-csharp-is-best-b030ee8f.mjs",
+    "file": "why-csharp-is-best-d79a3606.mjs",
     "src": "pages/blog/why-csharp-is-best.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_Footer-12049e91.mjs"
+      "_Footer-e60bc687.mjs"
     ]
   },
   "pages/blog/why-java-is-best.vue": {
-    "file": "why-java-is-best-d6b56bc1.mjs",
+    "file": "why-java-is-best-dbb1a69a.mjs",
     "src": "pages/blog/why-java-is-best.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_Footer-12049e91.mjs"
+      "_Footer-e60bc687.mjs"
     ]
   },
   "pages/blog/why-python-is-best.vue": {
-    "file": "why-python-is-best-d8ef0508.mjs",
+    "file": "why-python-is-best-941184fe.mjs",
     "src": "pages/blog/why-python-is-best.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_Footer-12049e91.mjs"
+      "_Footer-e60bc687.mjs"
     ]
   },
   "pages/index.vue": {
-    "file": "index-27112d3e.mjs",
+    "file": "index-12a7f7c4.mjs",
     "src": "pages/index.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_Footer-12049e91.mjs"
+      "_Footer-e60bc687.mjs"
     ]
   },
   "pages/snippets/django.vue": {
-    "file": "django-b7e0dfbc.mjs",
+    "file": "django-f448c4b0.mjs",
     "src": "pages/snippets/django.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_Footer-12049e91.mjs",
+      "_Footer-e60bc687.mjs",
       "_django-93029a7e.mjs"
     ]
   },
@@ -84,12 +84,12 @@
     "file": "django-93029a7e.mjs"
   },
   "pages/snippets/index.vue": {
-    "file": "index-8ff46464.mjs",
+    "file": "index-ab684503.mjs",
     "src": "pages/snippets/index.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_Footer-12049e91.mjs",
+      "_Footer-e60bc687.mjs",
       "_django-93029a7e.mjs"
     ]
   }
