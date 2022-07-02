@@ -1,6 +1,6 @@
 {
   "node_modules/nuxt/dist/app/entry.mjs": {
-    "file": "entry-23f7e91e.mjs",
+    "file": "entry-1960c7bc.mjs",
     "src": "node_modules/nuxt/dist/app/entry.mjs",
     "isEntry": true,
     "dynamicImports": [
@@ -11,52 +11,52 @@
       "pages/snippets/index.vue"
     ],
     "css": [
-      "entry.fd96a260.css"
+      "entry.64862a6d.css"
     ],
     "assets": [
       "profile.2da4a57b.jpeg"
     ]
   },
   "pages/blog/how-to-use-nmap.vue": {
-    "file": "how-to-use-nmap-8cd68962.mjs",
+    "file": "how-to-use-nmap-465b7dad.mjs",
     "src": "pages/blog/how-to-use-nmap.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_Footer-630a13de.mjs"
+      "_Footer-aa86bcfc.mjs"
     ]
   },
-  "_Footer-630a13de.mjs": {
-    "file": "Footer-630a13de.mjs",
+  "_Footer-aa86bcfc.mjs": {
+    "file": "Footer-aa86bcfc.mjs",
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs"
     ]
   },
   "pages/blog/index.vue": {
-    "file": "index-30af3b87.mjs",
+    "file": "index-01adfa6d.mjs",
     "src": "pages/blog/index.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_Footer-630a13de.mjs"
+      "_Footer-aa86bcfc.mjs"
     ]
   },
   "pages/index.vue": {
-    "file": "index-073849da.mjs",
+    "file": "index-01678337.mjs",
     "src": "pages/index.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_Footer-630a13de.mjs"
+      "_Footer-aa86bcfc.mjs"
     ]
   },
   "pages/snippets/django.vue": {
-    "file": "django-2b7ac896.mjs",
+    "file": "django-8df2c190.mjs",
     "src": "pages/snippets/django.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_Footer-630a13de.mjs",
+      "_Footer-aa86bcfc.mjs",
       "_django-93029a7e.mjs"
     ]
   },
@@ -64,12 +64,12 @@
     "file": "django-93029a7e.mjs"
   },
   "pages/snippets/index.vue": {
-    "file": "index-33c810d3.mjs",
+    "file": "index-4498eb06.mjs",
     "src": "pages/snippets/index.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_Footer-630a13de.mjs",
+      "_Footer-aa86bcfc.mjs",
       "_django-93029a7e.mjs"
     ]
   }
