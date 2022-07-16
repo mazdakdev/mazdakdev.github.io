@@ -1,4 +1,4 @@
-# mazdak.dev source code ⚡️
+# mazdak.dev ⚡️
 
 My Personal Website including blog , code snippets & ... its developed completely static and I did not develop any backend for it you can easily serve it in **github pages**
 
