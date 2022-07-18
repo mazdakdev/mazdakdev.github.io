@@ -19,7 +19,7 @@ My Personal Website including blog , code snippets & ... its developed completel
 ![sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
 
 
-# Serving on Github pages ✅
+# Serving on Github pages 
 
 1. clone the source code
 
