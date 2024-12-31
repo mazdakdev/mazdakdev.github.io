@@ -60,3 +60,11 @@ index_format = "elasticlunr_json"
 host = "persadon.com"
 user = "mazdak"
 show_qr = true
+
+
+[languages.fa]
+title = "مزدک پاک عقیده"
+description = "مزدک پاک عقیده"
+generate_feeds = true
+
+taxonomies = [{ name = "tags", feed = true }]

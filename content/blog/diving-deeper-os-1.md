@@ -1,6 +1,6 @@
 +++
 title = "Diving Deeper into Operating Systems – Part 0"
-description = "Test Post"
+description = "Have you ever wondered how do computers boot up? How does the computer find the operating system when there is none present? Or even how an operating system is developed?"
 date = 2023-09-23
 authors = ["Mazdak Pakaghideh"]
 [taxonomies]
