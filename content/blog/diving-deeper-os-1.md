@@ -160,10 +160,10 @@ If everything goes well, you should see a window like this:
 - How Computers Really Work by Matthew Justice
 - [wikipedia.org](http://wikipedia.org)
 - [github.com/cfenollosa/os-tutorial/](https://github.com/cfenollosa/os-tutorial/)
-- [www.cs.bham.ac.uk//~exr/lectures/opsys/10\_11/lectures/os-dev.pdf](https://www.cs.bham.ac.uk//~exr/lectures/opsys/10_11/lectures/os-dev.pdf)
+- [www.cs.bham.ac.uk](https://www.cs.bham.ac.uk//~exr/lectures/opsys/10_11/lectures/os-dev.pdf)
 - [wiki.osdev.org](http://wiki.osdev.org/)
 - [littleosbook.github.io](https://littleosbook.github.io/)
-- [web.archive.org/web/20160412174753/http://www.jamesmolloy.co.uk/tutorial\_html/index.html](https://web.archive.org/web/20160412174753/http://www.jamesmolloy.co.uk/tutorial_html/index.html)
+- [web.archive.org](https://web.archive.org/web/20160412174753/http://www.jamesmolloy.co.uk/tutorial_html/index.html)
 - [rocket.ir](https://rocket.ir)
 
 The post [Diving Deeper into Operating Systems – Part 0](https://mazdak.dev/diving-deeper-into-operating-systems-part-0/) appeared first on [mazdak.dev](https://mazdak.dev).

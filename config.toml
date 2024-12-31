@@ -20,8 +20,6 @@ taxonomies = [{ name = "tags", feed = true }]
 highlight_code = true
 highlight_theme = "dracula"
 
-smart_punctuation = true
-
 [slugify]
 paths = "on"
 taxonomies = "on"
