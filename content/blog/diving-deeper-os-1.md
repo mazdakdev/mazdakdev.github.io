@@ -2,8 +2,12 @@
 title = "Diving Deeper into Operating Systems – Part 0"
 description = "Test Post"
 date = 2023-09-23
+authors = ["Mazdak Pakaghideh"]
 [taxonomies]
 tags = ["os", "assembly", "low-level"]
+
+[extra.comments]
+id = 113747380646578451
 +++
 
 Have you ever wondered how do computers boot up? How does the computer find the operating system when there is none present? Or even how an operating system is developed? These questions intrigued me when I started learning programming. I pondered, whether is it possible for a simple calculator app to function standalone without an underlying operating system.
