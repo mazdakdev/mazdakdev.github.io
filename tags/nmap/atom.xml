@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>mazdak.dev - nmap</title>
+    <subtitle>Mazdak Pakaghideh</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://mazdakdev.github.io/tags/nmap/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://mazdakdev.github.io/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-01-08T00:00:00+00:00</updated>
+    <id>https://mazdakdev.github.io/tags/nmap/atom.xml</id>
+    <entry xml:lang="en">
+        <title>A Minimal Guide For Nmap</title>
+        <published>2023-01-08T00:00:00+00:00</published>
+        <updated>2023-01-08T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Mazdak Pakaghideh
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://mazdakdev.github.io/blog/nmap/"/>
+        <id>https://mazdakdev.github.io/blog/nmap/</id>
+        
+        <content type="html" xml:base="https://mazdakdev.github.io/blog/nmap/">&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;mazdak.dev&#x2F;wp-content&#x2F;uploads&#x2F;2023&#x2F;01&#x2F;nmap-1.png&quot; alt=&quot;Nmap&quot; &#x2F;&gt;
+&lt;em&gt;www.abrictosecurity.com&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;There are five main phases of hacking, and among them, the most essential one is gathering information.&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;First you need to find a weakness, without it you’re aimless.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;or in a more technical way Reconnaissance &amp;amp; Scanning. Nmap is a popular open-source software used for both active reconnaissance and scanning. It can scan through different ports of a particular server and by that it gives us a lot of information.&lt;&#x2F;p&gt;
+&lt;blockquote class=&quot;caution&quot;&gt;
+	&lt;p class=&quot;alert-title&quot;&gt;
+		&lt;i class=&quot;icon&quot;&gt;&lt;&#x2F;i&gt;Caution&lt;&#x2F;p&gt;
+	&lt;p&gt;Note: This utility should not be used in illegal activities. Instead, you can use it by participating in CTF platforms such as &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.hackthebox.com&#x2F;&quot;&gt;Hack The Box&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;so-basically-how&quot;&gt;So basically how?&lt;&#x2F;h2&gt;
+&lt;p&gt;Each port number is dedicated to a particular service running in the background of a system. These services can be accessed by their unique port numbers, and from them, a lot of information such as service name, version, and vulnerabilities can be gained. Knowing this information is essential for identifying potential weaknesses and determining if they are exploitable.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;nmap-features&quot;&gt;Nmap Features&lt;&#x2F;h2&gt;
+&lt;p&gt;Gaining information about services is just one of the many abilities of Nmap. In addition to these features, It offers a variety of different features.&lt;&#x2F;p&gt;
+&lt;p&gt;Which includes:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Scan for vulnerabilities&lt;&#x2F;li&gt;
+&lt;li&gt;Host discovery&lt;&#x2F;li&gt;
+&lt;li&gt;OS detection&lt;&#x2F;li&gt;
+&lt;li&gt;Firewall detection&lt;&#x2F;li&gt;
+&lt;li&gt;Identify open ports&lt;&#x2F;li&gt;
+&lt;li&gt;NSE Scripts&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;&#x2F;h2&gt;
+&lt;p&gt;Nmap could be easily installed in Unix&#x2F;Linux-based Operating Systems by using the commands below. Or by visiting &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;nmap.org&#x2F;download.html&quot;&gt;Nmap’s official download page&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt; sudo apt install namp &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6272a4;&quot;&gt;# Debian, Ubuntu
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt; sudo pacman&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; -S&lt;&#x2F;span&gt;&lt;span&gt; nmap &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6272a4;&quot;&gt;# Arch Linux
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt; sudo snap install nmap &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6272a4;&quot;&gt;# Fedora
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt; sudo brew install nmap &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6272a4;&quot;&gt;# MacOS
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;nmap-commands&quot;&gt;Nmap Commands&lt;&#x2F;h2&gt;
+&lt;p&gt;Before proceeding, here is Nmap’s general commands structure:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#282a36;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;$ nmap [Scan-type] [Options] [Target]
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;scanning-specific-systems&quot;&gt;Scanning Specific Systems&lt;&#x2F;h3&gt;
+&lt;p&gt;This command scans 1000 usual ports by default.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt; nmap &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;IP&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt; or &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;Hostname&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt; nmap &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;IP 1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;] [&lt;&#x2F;span&gt;&lt;span&gt;IP 2&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;] [&lt;&#x2F;span&gt;&lt;span&gt;IP n&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;]
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt; nmap 192.168.1.104 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6272a4;&quot;&gt;#Example
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;An Asterisk (*) could be used to scan all of the subnets.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#282a36;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;$ nmap 192.168.1.*
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;A hyphen (-) could be used to specify a range of IP address.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#282a36;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;$ nmap 192.168.0.0–255
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;stealth-scan&quot;&gt;Stealth Scan&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;img.wonderhowto.com&#x2F;img&#x2F;36&#x2F;13&#x2F;63578617777373&#x2F;0&#x2F;build-stealth-port-scanner-with-scapy-and-python.w1456.jpg&quot; alt=&quot;&quot; &#x2F;&gt;
+&lt;em&gt;By null-byte.wonderhowto.com&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Although just like any other TCP 3-Way-Handshake a stealth scan is started by sending an SYN packet to the server, It has one huge difference. a stealth scan never completes as like the normal 3-Way-Handshake. Accordingly, it’s hard for the target to determine the scanning system.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt; nmap&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; -sS &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;Target&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt; nmap&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; -sS&lt;&#x2F;span&gt;&lt;span&gt; 192.168.1.5
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;retrieving-all-ip-addresses-in-a-network&quot;&gt;Retrieving All IP Addresses In a Network&lt;&#x2F;h3&gt;
+&lt;p&gt;The commands below scan for all connected devices in a particular network using the TCP SYN scan method by providing a subnet range.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt; nmap&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; -sS &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;The_Subnet&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt; nmap&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; -sS&lt;&#x2F;span&gt;&lt;span&gt; 192.168.1.0&#x2F;24 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6272a4;&quot;&gt;#Example
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;service-version-scanning&quot;&gt;Service Version Scanning&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt; nmap&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; -sV &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;Target&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt; nmap&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; -sV&lt;&#x2F;span&gt;&lt;span&gt; scanme.nmap.org &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6272a4;&quot;&gt;#Example 
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;os-scanning&quot;&gt;OS Scanning&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;One of Nmap’s best-known features is remote OS detection using TCP&#x2F;IP stack fingerprinting. Nmap sends a series of TCP and UDP packets to the remote host and examines practically every bit in the responses. After performing dozens of tests such as TCP ISN sampling, TCP options support and ordering, IP ID sampling, and the initial window size check, Nmap compares the results to its &lt;code&gt;nmap-os-db&lt;&#x2F;code&gt; database of more than 2,600 known OS fingerprints and prints out the OS details if there is a match.nmap.org&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;cite&gt;nmap.org&lt;&#x2F;cite&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt; nmap&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; -O &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;Target&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt; nmap&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; -O&lt;&#x2F;span&gt;&lt;span&gt; scanme.nmap.org &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6272a4;&quot;&gt;#Example
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;aggressive-scanning&quot;&gt;Aggressive Scanning&lt;&#x2F;h3&gt;
+&lt;p&gt;This mode will enable OS detection (-O), Version Detection (-sV), Script scanning (-sC) and traceroute (–traceroute) altogether.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt; nmap&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; -A &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;Target&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt; nmap&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; -A&lt;&#x2F;span&gt;&lt;span&gt; scanme.nmap.org &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6272a4;&quot;&gt;#Example
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;port-scanning&quot;&gt;Port Scanning&lt;&#x2F;h3&gt;
+&lt;p&gt;By using the -p parameter, the port scan could be easily performed.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt; nmap&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; -p &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;Port&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;] [&lt;&#x2F;span&gt;&lt;span&gt;Target&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt; nmap&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; -p&lt;&#x2F;span&gt;&lt;span&gt; 22 192.168.1.5 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6272a4;&quot;&gt;#Example
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;You can even specify the type of your desired port.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt; nmap&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; -p&lt;&#x2F;span&gt;&lt;span&gt; T:80
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;A range of ports could be also scanned by Nmap.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt; nmap&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; -p&lt;&#x2F;span&gt;&lt;span&gt; 80-443 192.168.1.5
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;scanning-from-a-file&quot;&gt;Scanning From a File&lt;&#x2F;h3&gt;
+&lt;p&gt;This type of scan is very useful when automating. For instance, a script can crawl over a website and save all the servers in a particular file. So that Nmap could use this file to scan all the crawled servers and even more it could be used to save the results in a specific file.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt; nmap&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; -iL &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;Path_To_File&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;]
+&lt;&#x2F;span&gt;&lt;span&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt; nmap&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; -iL&lt;&#x2F;span&gt;&lt;span&gt; .&#x2F;servers.txt &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span&gt; result.txt &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6272a4;&quot;&gt;#Example
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;vulnerability-scanning&quot;&gt;Vulnerability Scanning&lt;&#x2F;h3&gt;
+&lt;p&gt;There are third-party scripts used for scanning vulnerabilities in Nmap. Among them the most well-known one is&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;vulnersCom&#x2F;nmap-vulners&quot;&gt;Nmap-Vulners&lt;&#x2F;a&gt;. You can use the commands below for installing and using this script.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#6272a4;&quot;&gt;# Navigating to the Nmap scripts directory
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt; cd &#x2F;usr&#x2F;share&#x2F;nmap&#x2F;scripts&#x2F;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6272a4;&quot;&gt;# Cloning the git repository
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt; git clone https:&#x2F;&#x2F;github.com&#x2F;vulnersCom&#x2F;nmap-vulners.git
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6272a4;&quot;&gt;# NSE scripts usage
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt; nmap&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; -sV --script&lt;&#x2F;span&gt;&lt;span&gt; vulners &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span&gt;script&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span&gt;args mincvss=&amp;lt;arg_val&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;] &amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;target&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6272a4;&quot;&gt;# Example
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt; nmap&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; -sV --script&lt;&#x2F;span&gt;&lt;span&gt; nmap-vulners&#x2F; 192.168.1.5
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The post &lt;a href=&quot;https:&#x2F;&#x2F;mazdak.dev&#x2F;a-minimal-guide-for-nmap&#x2F;&quot;&gt;A Minimal Guide For Nmap&lt;&#x2F;a&gt; appeared first on &lt;a href=&quot;https:&#x2F;&#x2F;mazdak.dev&quot;&gt;mazdak.dev&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
