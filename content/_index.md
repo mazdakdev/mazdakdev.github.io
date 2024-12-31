@@ -9,7 +9,7 @@
 Mazdak Pakaghideh
 
 [mazdak@central-brain ~]$ ls ~/interests
-Web-Development/  ML&DE/  Blockchain/  *Nix/ Security/
+Web-Development/  ML&DL/  Blockchain/  *Nix/ Security/
 
 [mazdak@central-brain ~]$ cat summary.txt
 

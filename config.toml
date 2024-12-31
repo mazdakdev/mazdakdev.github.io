@@ -1,7 +1,7 @@
 # Zola config
 
 title = "mazdak.dev"
-base_url = "https://test.mazdak.dev/"
+base_url = "https://mazdakdev.github.io/"
 description = "Mazdak Pakaghideh"
 theme = "duckquill"
 
